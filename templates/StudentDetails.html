@@ -1,6 +1,11 @@
 {% block content %}
 <h1>Student Details</h1>
 <table>
+    <form action="/addStudentOrganisation" method="POST">
+        <label for = "number"> Number: </label>
+        <input type = "text" id = "number" name ="number" placeholder="Enter a number:">
+        <button type="sumbit" value="submit">Submit</button>
+    </form>
     {%for key,value in studentOrganisationDetails.items()%}
 
     {%endfor%}
