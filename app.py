@@ -5,7 +5,7 @@ import datetime
 
 app = Flask(__name__)
 global studentOrganisationDetails
-studentOrganisationDetails = {'name1': "Charlotte Hack",'name2': "Code 9", 'name3': "Women who codes", 'name4': "Runtime Terror",'name5': "FrontPage Freebirds"}
+studentOrganisationDetails = {}
 # Assign default 5 values to studentOrganisationDetails for Application  3.
 
 
@@ -65,8 +65,11 @@ def displayStudentForm():
 def displayRegistrationPage():
     # Get student name and organisation from form.
     studentName = request.form['name']
-    studentOrganisationDetails.append(studentName)
+    studentOrginsation = request.form['studentOrganisation']
+
     # Append this value to studentOrganisationDetails
-    return render_template("studentDetails.html")
+    studentOrganisationDetails[studentName] = studentOrginsation
+    # Display studentDetails.html with all students and organisations
+    return render_template('StudentDetails.html',studentOrganisationDetails = studentOrganisationDetails)
 
     # Display studentDetails.html with all students and organisations

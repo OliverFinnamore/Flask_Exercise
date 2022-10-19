@@ -2,15 +2,17 @@
 <h1>Register</h1>
 <h4>Enter Student Information below</h4>
 <!--Form to request user's name-->
-
-<form action="/addStudentOrganisation" method="POST">
-    <label for = "name"> Name: </label>
-    <input type = "text" id = "name" name ="name" placeholder="Enter your name:">
-    <select name="studentOrganisation" id="studentOrganisation">
-        <option value="volvo">AA</option>
-
-      </select>
-    <button type="sumbit" value="submit">Register</button>
-    
-</form>
+<h3>Enter Student Name and Club: </h3>
+    <form action="/addStudentOrganisation" method="POST">
+        <label for = "name"> Name: </label>
+        <input type = "text" id = "name" name ="name" placeholder="Enter your name:">
+        <select name="studentOrganisation" id="studentOrganisation">
+          <option value="Charlotte Hack">Charlotte Hack</option>
+          <option value="Code 9">Code 9</option>
+          <option value="49th">49th</option>
+          <option value="Runtime Terror">Runtime Terror</option>
+          <option value="FrontPage Freebirds">FrontPage Freebirds</option>
+        </select>
+        <button type="sumbit" value="submit">Register</button>
+    </form>
 {% endblock %}
